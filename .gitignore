@@ -1,4 +1,6 @@
 .idea
 
+./web/vscode/
+./web/node_modules/
 ### VS Code ###
 .vscode/
