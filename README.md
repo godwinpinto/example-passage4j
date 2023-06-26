@@ -1,7 +1,10 @@
 # Passage4J + Java Microservices Framework Examples
-Now you implement seamless passwordless authentication in your favourite Microservice framework with Passage4J.
+Now you implement seamless passwordless authentication in your favourite Microservice framework with Passage4J by [Passage](https://passage.id/).
 
-This repository showcase examples of it is done.
+This repository showcases examples of how to integrate with each framework.
+
+## Passage
+Know more about passage [https://docs.passage.id/](https://docs.passage.id/)
 
 ## Microservice framwork included;
 - Spring Boot
@@ -28,7 +31,7 @@ Clone the repository
 git clone https://github.com/godwinpinto/example-passage4j.git
 cd example-passage4j
 ```
-Add your APP_ID and API_KEY to .env file
+Visit Passage console and create an app [https://console.passage.id/login](https://console.passage.id/login), copy the app id and api key and add your APP_ID and API_KEY to .env file
 
 ```shell
 vi .env
@@ -53,3 +56,5 @@ Quarkus
 docker-compose -f docker-compose-dev.yml --env-file .env up --build example-web example-quarkus
 ```
 
+### Note
+Examples are to be used a as reference point for integration of **Passage** with Java frameworks. You should choose the right security format as per the framework, review your architecture as per your needs for production.
