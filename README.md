@@ -28,7 +28,11 @@ Clone the repository
 git clone https://github.com/godwinpinto/example-passage4j.git
 cd example-passage4j
 ```
+Add your APP_ID and API_KEY to .env file
 
+```shell
+vi .env
+```
 Spring boot
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up example-web example-spring
