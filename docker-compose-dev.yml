@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  example-web:
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile-dev
+    image: passage-example-web:latest
+    container_name: passage-example-web
+    environment:
+      - PASSAGE_APP_ID=${PASSAGE_APP_ID}
+    expose:
+      - '3000'
+    network_mode: host
+
+
+  example-spring:
+   build:
+     context: ./spring-boot
+     dockerfile: ./Dockerfile-dev
+   image: passage-example-spring-boot:latest
+   container_name: passage-example-spring-boot
+   environment:
+      - PASSAGE_APP_ID=${PASSAGE_APP_ID}
+      - PASSAGE_API_KEY=${PASSAGE_API_KEY}
+   expose:
+     - '8080'
+   network_mode: host
+#   depends_on:
+#     - example-web
+
+  example-micronaut:
+   build:
+     context: ./micronaut
+     dockerfile: ./Dockerfile-dev
+   image: passage-example-micronaut:latest
+   container_name: passage-example-micronaut 
+   environment:
+      - PASSAGE_APP_ID=${PASSAGE_APP_ID}
+      - PASSAGE_API_KEY=${PASSAGE_API_KEY}
+   expose:
+     - '8080'
+   network_mode: host
+#   depends_on:
+#     - example-web
+
+  example-quarkus:
+   build:
+     context: ./quarkus
+     dockerfile: ./Dockerfile-dev
+   image: passage-example-quarkus:latest
+   container_name: passage-example-quarkus 
+   environment:
+      - PASSAGE_APP_ID=${PASSAGE_APP_ID}
+      - PASSAGE_API_KEY=${PASSAGE_API_KEY}
+   expose:
+     - '8080'
+   network_mode: host
+#   depends_on:
+#     - example-web
+
+  example-vertx:
+   build:
+     context: ./vertx
+     dockerfile: ./Dockerfile-dev
+   image: passage-example-vertx:latest
+   container_name: passage-example-vertx 
+   environment:
+      - PASSAGE_APP_ID=${PASSAGE_APP_ID}
+      - PASSAGE_API_KEY=${PASSAGE_API_KEY}
+   expose:
+     - '8080'
+   network_mode: host
+#   depends_on:
+#     - example-web
+

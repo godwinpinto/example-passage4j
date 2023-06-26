@@ -17,7 +17,6 @@ public class TokenAuthenticationProvider implements AuthenticationProvider {
   public Publisher<AuthenticationResponse> authenticate(@Nullable HttpRequest<?> httpRequest,
       AuthenticationRequest<?, ?> authenticationRequest) {
     return Flux.create(emitter -> {
-      System.out.println(authenticationRequest.getIdentity());
 /*
       if (authenticationRequest.getIdentity() == "sherlock" && authenticationRequest.secret == "password") {
 */

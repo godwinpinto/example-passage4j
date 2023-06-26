@@ -36,7 +36,6 @@ public class JwtAuthenticatorFilter implements AuthenticationFetcher {
       Optional<String> authorizationHeader = request.getHeaders().getAuthorization();
       if (authorizationHeader.isPresent()) {
         String authToken=authorizationHeader.get();
-        System.out.println(authToken);
         try {
           String userID=passage.auth().authenticateRequestWithAuthHeader(authToken);
           Authentication authentication=new ServerAuthentication(userID, Collections.emptyList(),Collections.emptyMap());

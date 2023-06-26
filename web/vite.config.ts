@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 
 export default defineConfig({
+  define:{
+    'import.meta.env.VITE_PASSAGE_APP_ID': JSON.stringify(process.env.PASSAGE_APP_ID),
+  },
   server:{
     port:3000,
     proxy: {
