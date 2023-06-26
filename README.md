@@ -25,33 +25,44 @@ Know more about passage [https://docs.passage.id/](https://docs.passage.id/)
 - docker-compose
 
 ## Quick run example
-
 Clone the repository
 ```shell
 git clone https://github.com/godwinpinto/example-passage4j.git
 cd example-passage4j
 ```
-Visit Passage console and create an app [https://console.passage.id/login](https://console.passage.id/login), copy the app id and api key and add your APP_ID and API_KEY to .env file
+Setup Passage application from passage console
+1. Visit Passage console [https://console.passage.id/login](https://console.passage.id/login)
+2. Create an app
+3. Go to Settings-> General
+   1. Authentication Origin: **http://localhost:3000**
+   2. Redirect URL: **/dashboard**
+   3. Login URL: **/**
+4. Create API_KEY: Settings->API Keys
+5. Copy the app id and api key
 
+Add your APP_ID and API_KEY to .env file
 ```shell
 vi .env
 ```
-Spring boot
+
+### Spring boot demo
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up example-web example-spring
 
 ```
-Micronaut
+
+### Micronaut
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up example-web example-micronaut
 
 ```
-VertX
+
+### VertX
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up --build example-web example-vertx
 ```
 
-Quarkus
+### Quarkus
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up --build example-web example-quarkus
 ```
