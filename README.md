@@ -26,12 +26,15 @@ Know more about passage [https://docs.passage.id/](https://docs.passage.id/)
 - docker-compose
 
 ## Quick run example
-Clone the repository
+As I also believe developer first experience 😄
+
+**Clone the repository**
 ```shell
 git clone https://github.com/godwinpinto/example-passage4j.git
 cd example-passage4j
 ```
-Setup Passage application from passage console
+
+**Setup Passage application from passage console**
 1. Visit Passage console [https://console.passage.id/login](https://console.passage.id/login)
 2. Create an app
 3. Go to Settings-> General
@@ -41,7 +44,7 @@ Setup Passage application from passage console
 4. Create API_KEY: Settings->API Keys
 5. Copy the app id and api key
 
-Add your APP_ID and API_KEY to .env file
+**Add your APP_ID and API_KEY to .env file**
 ```shell
 vi .env
 ```
