@@ -15,6 +15,7 @@ Know more about passage [https://docs.passage.id/](https://docs.passage.id/)
 
 ### Prerequisite for running demo
 - docker-compose
+- Internet connection
 - Make sure port 8080 and 3000 are free
 - Starting any of the above command also starts the react web application accesible at [http://localhost:8080](http://localhost:8080).
 
@@ -44,6 +45,9 @@ Add your APP_ID and API_KEY to .env file
 ```shell
 vi .env
 ```
+
+## Few notes
+If you get a message "Passage Error - , message: Failed to fetch JWKS". stop the docker-compose (CTRL+C) and run again. Investigation is under way.
 
 ### Spring boot demo
 ```shell
