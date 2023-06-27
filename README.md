@@ -54,22 +54,25 @@ If you get a message "Passage Error - , message: Failed to fetch JWKS". stop the
 docker-compose -f docker-compose-dev.yml --env-file .env up example-web example-spring
 
 ```
-
+Go to [http://localhost:3000](http://localhost:3000)
 ### Micronaut
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up example-web example-micronaut
 
 ```
+Go to [http://localhost:3000](http://localhost:3000)
 
 ### VertX
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up --build example-web example-vertx
 ```
+Go to [http://localhost:3000](http://localhost:3000)
 
 ### Quarkus
 ```shell
 docker-compose -f docker-compose-dev.yml --env-file .env up --build example-web example-quarkus
 ```
+Go to [http://localhost:3000](http://localhost:3000)
 
 ### Note
 Examples are to be used a as reference point for integration of **Passage** with Java frameworks. You should choose the right security format as per the framework, review your architecture as per your needs for production.
